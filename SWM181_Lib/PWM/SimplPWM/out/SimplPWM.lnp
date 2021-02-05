@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+".\out\main.o"
+".\out\swm181_adc.o"
+".\out\swm181_cmp.o"
+".\out\swm181_exti.o"
+".\out\swm181_gpio.o"
+".\out\swm181_i2c.o"
+".\out\swm181_pwm.o"
+".\out\swm181_timr.o"
+".\out\swm181_uart.o"
+".\out\swm181_wdt.o"
+".\out\swm181_can.o"
+".\out\swm181_cordic.o"
+".\out\swm181_div.o"
+".\out\swm181_dma.o"
+".\out\swm181_flash.o"
+".\out\swm181_irqmux.o"
+".\out\swm181_port.o"
+".\out\swm181_sdadc.o"
+".\out\swm181_slcd.o"
+".\out\swm181_spi.o"
+".\out\swm181_cache.o"
+".\out\system_swm181.o"
+".\out\startup_swm181.o"
+--library_type=microlib --strict --scatter ".\out\SimplPWM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\out\SimplPWM.map" -o .\out\SimplPWM.axf

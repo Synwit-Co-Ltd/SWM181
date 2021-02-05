@@ -1,0 +1,480 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text) refers to swm181_port.o(.text) for PORT_Init
+    main.o(.text) refers to swm181_uart.o(.text) for UART_Init
+    main.o(.text) refers to system_swm181.o(.text) for SystemInit
+    main.o(.text) refers to swm181_gpio.o(.text) for GPIO_Init
+    main.o(.text) refers to swm181_sleep.o(.emb_text) for EnterStopMode
+    swm181_gpio.o(.text) refers to swm181_port.o(.text) for PORT_Init
+    swm181_i2c.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm181_i2c.o(.text) refers to system_swm181.o(.data) for SystemCoreClock
+    swm181_uart.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm181_uart.o(.text) refers to system_swm181.o(.data) for SystemCoreClock
+    swm181_can.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm181_can.o(.text) refers to system_swm181.o(.data) for SystemCoreClock
+    swm181_cordic.o(.text) refers to swm181_div.o(.text) for DIV_Init
+    swm181_dma.o(.text) refers to swm181_dma.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    swm181_flash.o(.text) refers to swm181_cache.o(.text) for CACHE_Invalid
+    swm181_flash.o(.text) refers to swm181_flash.o(.data) for .data
+    swm181_sdadc.o(.text) refers to swm181_port.o(.text) for PORT_Init
+    swm181_slcd.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    swm181_slcd.o(.text) refers to system_swm181.o(.data) for SystemCoreClock
+    swm181_sleep.o(.emb_text) refers to swm181_sleep.o(.data) for Code_EnterSleepMode
+    swm181_sleep.o(.emb_text) refers to swm181_sleep.o(.data) for Code_EnterStopMode
+    system_swm181.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_swm181.o(.text) refers to swm181_port.o(.text) for PORT_Init
+    system_swm181.o(.text) refers to system_swm181.o(.data) for .data
+    startup_swm181.o(RESET) refers to startup_swm181.o(STACK) for Stack_Mem
+    startup_swm181.o(RESET) refers to startup_swm181.o(.text) for Reset_Handler
+    startup_swm181.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_swm181.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_swm181.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing swm181_adc.o(.rev16_text), (4 bytes).
+    Removing swm181_adc.o(.revsh_text), (4 bytes).
+    Removing swm181_adc.o(.text), (636 bytes).
+    Removing swm181_cmp.o(.rev16_text), (4 bytes).
+    Removing swm181_cmp.o(.revsh_text), (4 bytes).
+    Removing swm181_cmp.o(.text), (496 bytes).
+    Removing swm181_exti.o(.rev16_text), (4 bytes).
+    Removing swm181_exti.o(.revsh_text), (4 bytes).
+    Removing swm181_exti.o(.text), (136 bytes).
+    Removing swm181_gpio.o(.rev16_text), (4 bytes).
+    Removing swm181_gpio.o(.revsh_text), (4 bytes).
+    Removing swm181_i2c.o(.rev16_text), (4 bytes).
+    Removing swm181_i2c.o(.revsh_text), (4 bytes).
+    Removing swm181_i2c.o(.text), (444 bytes).
+    Removing swm181_pwm.o(.rev16_text), (4 bytes).
+    Removing swm181_pwm.o(.revsh_text), (4 bytes).
+    Removing swm181_pwm.o(.text), (1384 bytes).
+    Removing swm181_timr.o(.rev16_text), (4 bytes).
+    Removing swm181_timr.o(.revsh_text), (4 bytes).
+    Removing swm181_timr.o(.text), (544 bytes).
+    Removing swm181_uart.o(.rev16_text), (4 bytes).
+    Removing swm181_uart.o(.revsh_text), (4 bytes).
+    Removing swm181_wdt.o(.rev16_text), (4 bytes).
+    Removing swm181_wdt.o(.revsh_text), (4 bytes).
+    Removing swm181_wdt.o(.text), (98 bytes).
+    Removing swm181_can.o(.rev16_text), (4 bytes).
+    Removing swm181_can.o(.revsh_text), (4 bytes).
+    Removing swm181_can.o(.text), (856 bytes).
+    Removing swm181_cordic.o(.rev16_text), (4 bytes).
+    Removing swm181_cordic.o(.revsh_text), (4 bytes).
+    Removing swm181_cordic.o(.text), (28 bytes).
+    Removing swm181_div.o(.rev16_text), (4 bytes).
+    Removing swm181_div.o(.revsh_text), (4 bytes).
+    Removing swm181_div.o(.text), (20 bytes).
+    Removing swm181_dma.o(.rev16_text), (4 bytes).
+    Removing swm181_dma.o(.revsh_text), (4 bytes).
+    Removing swm181_dma.o(.text), (604 bytes).
+    Removing swm181_flash.o(.rev16_text), (4 bytes).
+    Removing swm181_flash.o(.revsh_text), (4 bytes).
+    Removing swm181_flash.o(.text), (180 bytes).
+    Removing swm181_flash.o(PlaceInRAM), (96 bytes).
+    Removing swm181_flash.o(.data), (4 bytes).
+    Removing swm181_irqmux.o(.rev16_text), (4 bytes).
+    Removing swm181_irqmux.o(.revsh_text), (4 bytes).
+    Removing swm181_irqmux.o(.text), (232 bytes).
+    Removing swm181_port.o(.rev16_text), (4 bytes).
+    Removing swm181_port.o(.revsh_text), (4 bytes).
+    Removing swm181_sdadc.o(.rev16_text), (4 bytes).
+    Removing swm181_sdadc.o(.revsh_text), (4 bytes).
+    Removing swm181_sdadc.o(.text), (456 bytes).
+    Removing swm181_slcd.o(.rev16_text), (4 bytes).
+    Removing swm181_slcd.o(.revsh_text), (4 bytes).
+    Removing swm181_slcd.o(.text), (144 bytes).
+    Removing swm181_spi.o(.rev16_text), (4 bytes).
+    Removing swm181_spi.o(.revsh_text), (4 bytes).
+    Removing swm181_spi.o(.text), (492 bytes).
+    Removing swm181_cache.o(.rev16_text), (4 bytes).
+    Removing swm181_cache.o(.revsh_text), (4 bytes).
+    Removing swm181_cache.o(.text), (168 bytes).
+    Removing swm181_sleep.o(.rev16_text), (4 bytes).
+    Removing swm181_sleep.o(.revsh_text), (4 bytes).
+    Removing system_swm181.o(.rev16_text), (4 bytes).
+    Removing system_swm181.o(.revsh_text), (4 bytes).
+    Removing startup_swm181.o(HEAP), (0 bytes).
+    Removing swm181_dma.o(i.__ARM_common_switch8), (26 bytes).
+
+67 unused section(s) (total 7228 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_swm181.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM181.s 0x00000000   Number         0  startup_swm181.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\CMSIS\DeviceSupport\system_SWM181.c 0x00000000   Number         0  system_swm181.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_adc.c 0x00000000   Number         0  swm181_adc.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_cache.c 0x00000000   Number         0  swm181_cache.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_can.c 0x00000000   Number         0  swm181_can.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_cmp.c 0x00000000   Number         0  swm181_cmp.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.c 0x00000000   Number         0  swm181_cordic.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_div.c 0x00000000   Number         0  swm181_div.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_dma.c 0x00000000   Number         0  swm181_dma.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_exti.c 0x00000000   Number         0  swm181_exti.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_flash.c 0x00000000   Number         0  swm181_flash.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_gpio.c 0x00000000   Number         0  swm181_gpio.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_i2c.c 0x00000000   Number         0  swm181_i2c.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.c 0x00000000   Number         0  swm181_irqmux.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_port.c 0x00000000   Number         0  swm181_port.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_pwm.c 0x00000000   Number         0  swm181_pwm.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_sdadc.c 0x00000000   Number         0  swm181_sdadc.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_slcd.c 0x00000000   Number         0  swm181_slcd.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.c 0x00000000   Number         0  swm181_sleep.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_spi.c 0x00000000   Number         0  swm181_spi.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_timr.c 0x00000000   Number         0  swm181_timr.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_uart.c 0x00000000   Number         0  swm181_uart.o ABSOLUTE
+    ..\..\SWM181_StdPeriph_Driver\CSL\SWM181_StdPeriph_Driver\SWM181_wdt.c 0x00000000   Number         0  swm181_wdt.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\CMSIS\\DeviceSupport\\system_SWM181.c 0x00000000   Number         0  system_swm181.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_adc.c 0x00000000   Number         0  swm181_adc.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_cache.c 0x00000000   Number         0  swm181_cache.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_can.c 0x00000000   Number         0  swm181_can.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_cmp.c 0x00000000   Number         0  swm181_cmp.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_cordic.c 0x00000000   Number         0  swm181_cordic.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_div.c 0x00000000   Number         0  swm181_div.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_dma.c 0x00000000   Number         0  swm181_dma.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_exti.c 0x00000000   Number         0  swm181_exti.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_flash.c 0x00000000   Number         0  swm181_flash.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_gpio.c 0x00000000   Number         0  swm181_gpio.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_i2c.c 0x00000000   Number         0  swm181_i2c.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_irqmux.c 0x00000000   Number         0  swm181_irqmux.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_port.c 0x00000000   Number         0  swm181_port.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_pwm.c 0x00000000   Number         0  swm181_pwm.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_sdadc.c 0x00000000   Number         0  swm181_sdadc.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_slcd.c 0x00000000   Number         0  swm181_slcd.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_sleep.c 0x00000000   Number         0  swm181_sleep.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_spi.c 0x00000000   Number         0  swm181_spi.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_timr.c 0x00000000   Number         0  swm181_timr.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_uart.c 0x00000000   Number         0  swm181_uart.o ABSOLUTE
+    ..\\..\\SWM181_StdPeriph_Driver\\CSL\\SWM181_StdPeriph_Driver\\SWM181_wdt.c 0x00000000   Number         0  swm181_wdt.o ABSOLUTE
+    app\\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    app\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x000000d4   Section       40  swm181_sleep.o(.emb_text)
+    .text                                    0x000000fc   Section        0  main.o(.text)
+    .text                                    0x000001b4   Section        0  swm181_gpio.o(.text)
+    .text                                    0x00000394   Section        0  swm181_uart.o(.text)
+    .text                                    0x00000654   Section        0  swm181_port.o(.text)
+    .text                                    0x00000810   Section        0  system_swm181.o(.text)
+    switchToXTAL                             0x00000867   Thumb Code    66  system_swm181.o(.text)
+    switchToRC24MHz                          0x000008a9   Thumb Code    26  system_swm181.o(.text)
+    switchToRC32KHz                          0x000008c3   Thumb Code    26  system_swm181.o(.text)
+    switchToRC12MHz                          0x000008dd   Thumb Code    28  system_swm181.o(.text)
+    switchToRC48MHz                          0x000008f9   Thumb Code    28  system_swm181.o(.text)
+    switchToRC6MHz                           0x00000915   Thumb Code    26  system_swm181.o(.text)
+    .text                                    0x00000980   Section       88  startup_swm181.o(.text)
+    .text                                    0x000009d8   Section        0  uidiv.o(.text)
+    .text                                    0x00000a04   Section       36  init.o(.text)
+    i.__scatterload_copy                     0x00000a28   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000a36   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000a38   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .data                                    0x20000000   Section       24  swm181_sleep.o(.data)
+    .data                                    0x20000018   Section       40  swm181_sleep.o(.data)
+    .data                                    0x20000040   Section        8  system_swm181.o(.data)
+    STACK                                    0x20000048   Section     2048  startup_swm181.o(STACK)
+    Stack_Mem                                0x20000048   Data        2048  startup_swm181.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_swm181.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  startup_swm181.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  startup_swm181.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    EnterSleepMode                           0x000000d5   Thumb Code    16  swm181_sleep.o(.emb_text)
+    EnterStopMode                            0x000000e9   Thumb Code    16  swm181_sleep.o(.emb_text)
+    SerialInit                               0x000000fd   Thumb Code    66  main.o(.text)
+    main                                     0x0000013f   Thumb Code    72  main.o(.text)
+    fputc                                    0x00000187   Thumb Code    28  main.o(.text)
+    GPIO_Init                                0x000001b5   Thumb Code   234  swm181_gpio.o(.text)
+    GPIO_SetBit                              0x0000029f   Thumb Code    12  swm181_gpio.o(.text)
+    GPIO_ClrBit                              0x000002ab   Thumb Code    12  swm181_gpio.o(.text)
+    GPIO_InvBit                              0x000002b7   Thumb Code    12  swm181_gpio.o(.text)
+    GPIO_GetBit                              0x000002c3   Thumb Code    10  swm181_gpio.o(.text)
+    GPIO_SetBits                             0x000002cd   Thumb Code    18  swm181_gpio.o(.text)
+    GPIO_ClrBits                             0x000002df   Thumb Code    18  swm181_gpio.o(.text)
+    GPIO_InvBits                             0x000002f1   Thumb Code    18  swm181_gpio.o(.text)
+    GPIO_GetBits                             0x00000303   Thumb Code    16  swm181_gpio.o(.text)
+    GPIO_AtomicSetBit                        0x00000313   Thumb Code    16  swm181_gpio.o(.text)
+    GPIO_AtomicClrBit                        0x00000323   Thumb Code    16  swm181_gpio.o(.text)
+    GPIO_AtomicInvBit                        0x00000333   Thumb Code    16  swm181_gpio.o(.text)
+    GPIO_AtomicSetBits                       0x00000343   Thumb Code    22  swm181_gpio.o(.text)
+    GPIO_AtomicClrBits                       0x00000359   Thumb Code    22  swm181_gpio.o(.text)
+    GPIO_AtomicInvBits                       0x0000036f   Thumb Code    22  swm181_gpio.o(.text)
+    UART_Close                               0x00000395   Thumb Code    12  swm181_uart.o(.text)
+    UART_Init                                0x000003a1   Thumb Code   210  swm181_uart.o(.text)
+    UART_Open                                0x00000473   Thumb Code    12  swm181_uart.o(.text)
+    UART_WriteByte                           0x0000047f   Thumb Code     4  swm181_uart.o(.text)
+    UART_ReadByte                            0x00000483   Thumb Code    20  swm181_uart.o(.text)
+    UART_IsTXBusy                            0x00000497   Thumb Code    10  swm181_uart.o(.text)
+    UART_IsRXFIFOEmpty                       0x000004a1   Thumb Code    10  swm181_uart.o(.text)
+    UART_IsTXFIFOFull                        0x000004ab   Thumb Code     8  swm181_uart.o(.text)
+    UART_SetBaudrate                         0x000004b3   Thumb Code    32  swm181_uart.o(.text)
+    UART_GetBaudrate                         0x000004d3   Thumb Code    22  swm181_uart.o(.text)
+    UART_CTSConfig                           0x000004e9   Thumb Code    22  swm181_uart.o(.text)
+    UART_CTSLineState                        0x000004ff   Thumb Code     8  swm181_uart.o(.text)
+    UART_RTSConfig                           0x00000507   Thumb Code    28  swm181_uart.o(.text)
+    UART_RTSLineState                        0x00000523   Thumb Code     8  swm181_uart.o(.text)
+    UART_LINConfig                           0x0000052b   Thumb Code    22  swm181_uart.o(.text)
+    UART_LINGenerate                         0x00000541   Thumb Code    10  swm181_uart.o(.text)
+    UART_LINIsDetected                       0x0000054b   Thumb Code     8  swm181_uart.o(.text)
+    UART_LINIsGenerated                      0x00000553   Thumb Code     8  swm181_uart.o(.text)
+    UART_ABRStart                            0x0000055b   Thumb Code    90  swm181_uart.o(.text)
+    UART_ABRIsDone                           0x000005b5   Thumb Code    24  swm181_uart.o(.text)
+    UART_INTRXThresholdEn                    0x000005cd   Thumb Code    10  swm181_uart.o(.text)
+    UART_INTRXThresholdDis                   0x000005d7   Thumb Code    10  swm181_uart.o(.text)
+    UART_INTRXThresholdStat                  0x000005e1   Thumb Code     8  swm181_uart.o(.text)
+    UART_INTTXThresholdEn                    0x000005e9   Thumb Code    10  swm181_uart.o(.text)
+    UART_INTTXThresholdDis                   0x000005f3   Thumb Code    10  swm181_uart.o(.text)
+    UART_INTTXThresholdStat                  0x000005fd   Thumb Code     8  swm181_uart.o(.text)
+    UART_INTTimeoutEn                        0x00000605   Thumb Code    12  swm181_uart.o(.text)
+    UART_INTTimeoutDis                       0x00000611   Thumb Code    12  swm181_uart.o(.text)
+    UART_INTTimeoutStat                      0x0000061d   Thumb Code     8  swm181_uart.o(.text)
+    UART_INTTXDoneEn                         0x00000625   Thumb Code    10  swm181_uart.o(.text)
+    UART_INTTXDoneDis                        0x0000062f   Thumb Code    10  swm181_uart.o(.text)
+    UART_INTTXDoneStat                       0x00000639   Thumb Code     8  swm181_uart.o(.text)
+    PORT_Init                                0x00000655   Thumb Code   434  swm181_port.o(.text)
+    SystemCoreClockUpdate                    0x00000811   Thumb Code    86  system_swm181.o(.text)
+    SystemInit                               0x0000092f   Thumb Code    44  system_swm181.o(.text)
+    Reset_Handler                            0x00000981   Thumb Code     4  startup_swm181.o(.text)
+    NMI_Handler                              0x00000985   Thumb Code     2  startup_swm181.o(.text)
+    HardFault_Handler                        0x00000987   Thumb Code     2  startup_swm181.o(.text)
+    SVC_Handler                              0x00000989   Thumb Code     2  startup_swm181.o(.text)
+    PendSV_Handler                           0x0000098b   Thumb Code     2  startup_swm181.o(.text)
+    SysTick_Handler                          0x0000098d   Thumb Code     2  startup_swm181.o(.text)
+    IRQ0_Handler                             0x0000098f   Thumb Code     2  startup_swm181.o(.text)
+    IRQ1_Handler                             0x00000991   Thumb Code     2  startup_swm181.o(.text)
+    IRQ2_Handler                             0x00000993   Thumb Code     2  startup_swm181.o(.text)
+    IRQ3_Handler                             0x00000995   Thumb Code     2  startup_swm181.o(.text)
+    IRQ4_Handler                             0x00000997   Thumb Code     2  startup_swm181.o(.text)
+    IRQ5_Handler                             0x00000999   Thumb Code     2  startup_swm181.o(.text)
+    IRQ6_Handler                             0x0000099b   Thumb Code     2  startup_swm181.o(.text)
+    IRQ7_Handler                             0x0000099d   Thumb Code     2  startup_swm181.o(.text)
+    IRQ8_Handler                             0x0000099f   Thumb Code     2  startup_swm181.o(.text)
+    IRQ9_Handler                             0x000009a1   Thumb Code     2  startup_swm181.o(.text)
+    IRQ10_Handler                            0x000009a3   Thumb Code     2  startup_swm181.o(.text)
+    IRQ11_Handler                            0x000009a5   Thumb Code     2  startup_swm181.o(.text)
+    IRQ12_Handler                            0x000009a7   Thumb Code     2  startup_swm181.o(.text)
+    IRQ13_Handler                            0x000009a9   Thumb Code     2  startup_swm181.o(.text)
+    IRQ14_Handler                            0x000009ab   Thumb Code     2  startup_swm181.o(.text)
+    IRQ15_Handler                            0x000009ad   Thumb Code     2  startup_swm181.o(.text)
+    IRQ16_Handler                            0x000009af   Thumb Code     2  startup_swm181.o(.text)
+    IRQ17_Handler                            0x000009b1   Thumb Code     2  startup_swm181.o(.text)
+    IRQ18_Handler                            0x000009b3   Thumb Code     2  startup_swm181.o(.text)
+    IRQ19_Handler                            0x000009b5   Thumb Code     2  startup_swm181.o(.text)
+    IRQ20_Handler                            0x000009b7   Thumb Code     2  startup_swm181.o(.text)
+    IRQ21_Handler                            0x000009b9   Thumb Code     2  startup_swm181.o(.text)
+    IRQ22_Handler                            0x000009bb   Thumb Code     2  startup_swm181.o(.text)
+    IRQ23_Handler                            0x000009bd   Thumb Code     2  startup_swm181.o(.text)
+    IRQ24_Handler                            0x000009bf   Thumb Code     2  startup_swm181.o(.text)
+    IRQ25_Handler                            0x000009c1   Thumb Code     2  startup_swm181.o(.text)
+    IRQ26_Handler                            0x000009c3   Thumb Code     2  startup_swm181.o(.text)
+    IRQ27_Handler                            0x000009c5   Thumb Code     2  startup_swm181.o(.text)
+    IRQ28_Handler                            0x000009c9   Thumb Code     2  startup_swm181.o(.text)
+    IRQ29_Handler                            0x000009cd   Thumb Code     2  startup_swm181.o(.text)
+    IRQ30_Handler                            0x000009cf   Thumb Code     2  startup_swm181.o(.text)
+    IRQ31_Handler                            0x000009d1   Thumb Code     2  startup_swm181.o(.text)
+    __aeabi_uidiv                            0x000009d9   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x000009d9   Thumb Code    44  uidiv.o(.text)
+    __scatterload                            0x00000a05   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000a05   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x00000a29   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000a37   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000a39   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x00000a48   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000a68   Number         0  anon$$obj.o(Region$$Table)
+    Code_EnterSleepMode                      0x20000000   Data          24  swm181_sleep.o(.data)
+    Code_EnterStopMode                       0x20000018   Data          40  swm181_sleep.o(.data)
+    SystemCoreClock                          0x20000040   Data           4  system_swm181.o(.data)
+    CyclesPerUs                              0x20000044   Data           4  system_swm181.o(.data)
+    __initial_sp                             0x20000848   Data           0  startup_swm181.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000ab0, Max: 0x0001e000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000a68, Max: 0x0001e000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO          574    RESET               startup_swm181.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO          579  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO          584    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO          587    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          589    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          591    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO          592    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          594    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          596    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO          585    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x000000d4   0x00000028   Code   RO          526    .emb_text           swm181_sleep.o
+    0x000000fc   0x000000fc   0x000000b8   Code   RO            3    .text               main.o
+    0x000001b4   0x000001b4   0x000001e0   Code   RO          172    .text               swm181_gpio.o
+    0x00000394   0x00000394   0x000002c0   Code   RO          252    .text               swm181_uart.o
+    0x00000654   0x00000654   0x000001bc   Code   RO          426    .text               swm181_port.o
+    0x00000810   0x00000810   0x00000170   Code   RO          548    .text               system_swm181.o
+    0x00000980   0x00000980   0x00000058   Code   RO          575    .text               startup_swm181.o
+    0x000009d8   0x000009d8   0x0000002c   Code   RO          582    .text               mc_p.l(uidiv.o)
+    0x00000a04   0x00000a04   0x00000024   Code   RO          598    .text               mc_p.l(init.o)
+    0x00000a28   0x00000a28   0x0000000e   Code   RO          602    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00000a36   0x00000a36   0x00000002   Code   RO          603    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00000a38   0x00000a38   0x0000000e   Code   RO          604    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00000a46   0x00000a46   0x00000002   PAD
+    0x00000a48   0x00000a48   0x00000020   Data   RO          600    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00000a68, Size: 0x00000848, Max: 0x00004000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000a68   0x00000018   Data   RW          527    .data               swm181_sleep.o
+    0x20000018   0x00000a80   0x00000028   Data   RW          528    .data               swm181_sleep.o
+    0x20000040   0x00000aa8   0x00000008   Data   RW          549    .data               system_swm181.o
+    0x20000048        -       0x00000800   Zero   RW          572    STACK               startup_swm181.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       184         18          0          0          0     103280   main.o
+        88         10        192          0       2048       1992   startup_swm181.o
+       480         16          0          0          0       4595   swm181_gpio.o
+       444         10          0          0          0       1636   swm181_port.o
+        40          8          0         64          0       1437   swm181_sleep.o
+       704         20          0          0          0       6982   swm181_uart.o
+       368         38          0          8          0       1825   system_swm181.o
+
+    ----------------------------------------------------------------------
+      2308        120        224         72       2048     121747   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        44          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+       132         16          0          0          0        140   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       130         16          0          0          0        140   mc_p.l
+
+    ----------------------------------------------------------------------
+       132         16          0          0          0        140   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2440        136        224         72       2048     121767   Grand Totals
+      2440        136        224         72       2048     121767   ELF Image Totals
+      2440        136        224         72          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2664 (   2.60kB)
+    Total RW  Size (RW Data + ZI Data)              2120 (   2.07kB)
+    Total ROM Size (Code + RO Data + RW Data)       2736 (   2.67kB)
+
+==============================================================================
+
